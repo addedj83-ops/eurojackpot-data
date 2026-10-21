@@ -58,6 +58,9 @@ jobs:
       - name: Configure GitHub Pages
         uses: actions/configure-pages@v5
 
+      - name: List files to publish
+        run: find public -maxdepth 3 -type f | sort
+
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@v3
         with:
